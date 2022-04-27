@@ -16,10 +16,10 @@ export enum Delays {
  */
 function delayedHello(
   name: string,
-  delay: number = Delays.Medium,
+  delay: number = Delays.Medium
 ): Promise<string> {
   return new Promise((resolve: (value?: string) => void) =>
-    setTimeout(() => resolve(`Hello, ${name}`), delay),
+    setTimeout(() => resolve(`Hello, ${name}`), delay)
   );
 }
 
@@ -27,6 +27,7 @@ function delayedHello(
 // Here it is suppressing a missing return type definition for the greeter function.
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+console.log(`here we go`);
 export async function greeter(name: string) {
   return await delayedHello(name, Delays.Long);
 }
