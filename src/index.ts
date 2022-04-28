@@ -3,20 +3,7 @@ import { Item } from './item/index.js';
 import { PerTotal } from './rules/percent/index.js';
 import { PerItem } from './rules/item/index.js';
 import { Checkout } from './checkout/index.js';
-
-type productType = {
-  code: string;
-  name: string;
-  price: number;
-};
-
-type rulesType = {
-  percent?: number;
-  limit?: number;
-  code?: string;
-  minItem?: number;
-  discount?: number;
-};
+import { productType, rulesType } from './types/index';
 
 let products: Array<productType>;
 let rules: Array<rulesType>;

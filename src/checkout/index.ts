@@ -1,15 +1,5 @@
-type rulesType = {
-  percent?: number;
-  limit?: number;
-  code?: string;
-  minItem?: number;
-  discount?: number;
-};
-type productType = {
-  code: string;
-  name: string;
-  price: number;
-};
+import { productType, rulesType } from '../types/index';
+
 const basket: Array<productType> = [];
 let totalPrice;
 
@@ -24,7 +14,7 @@ export class Checkout {
 
   scan(code: string) {
     if (!this.validItem(code)) {
-      console.log(`code ${code} is not a valid item code`);
+      return console.log(`code ${code} is not a valid item code`);
     }
     this.products.map((item) => {
       if (item.code == code) {
@@ -33,12 +23,9 @@ export class Checkout {
     });
   }
   applyRules(rules: Array<rulesType>, basket: Array<productType>) {
-    console.log(`basket`, basket);
     totalPrice = basket.reduce((n, { price }) => n + price, 0);
-    console.log(`totalPrice :->`, totalPrice);
     const item_code = '002';
     const count = this.checkOccurency(basket, item_code);
-    console.log(`count`, count);
     for (const rule of rules) {
       if (rule?.limit < totalPrice) {
         totalPrice = totalPrice - (totalPrice * rule?.percent) / 100;
