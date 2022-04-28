@@ -18,6 +18,8 @@
 
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.6-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2016.13-blue.svg
+[nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
 [gha-badge]: https://github.com/jsynowiec/node-typescript-boilerplate/actions/workflows/nodejs.yml/badge.svg
 [gha-ci]: https://github.com/jsynowiec/node-typescript-boilerplate/actions/workflows/nodejs.yml
+[typescript]: https://www.typescriptlang.org/
 [typescript-4-6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/
