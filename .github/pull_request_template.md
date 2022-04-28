@@ -1,6 +1,6 @@
 #### Description of changes made
 
-> This PR adds configuration to add linting checks to the codebase.
+> This PR adds the refactoring for types.
 
 #### Type of change
 
@@ -8,6 +8,7 @@
 
 - [ ] New feature (non-breaking changes which add the new functionalities)
 - [ ] Bug fix (non-breaking changes which fix an issue)
+- [ ] Chore(non-breaking changes which fix an issue)
 - [ ] Documentation (added or improved the documentation)
 - [ ] Breaking change (fix or a feature that would cause existing feature not to work as expected)
 - [ ] This change requires a documentation update
@@ -25,10 +26,11 @@
 
 > **Provide the steps to manually test the functionalities implemented in this PR**
 
-- After cloning the `git@github.com:BitLipa/bitlipa-mobile-app.git`
-- Check out this branch by `branch here`
-- Run `yarn install` to install the project dependencies
-- Run `yarn android`
+- After cloning the `git@github.com:Jaman-dedy/checkout-system.git`
+- Check out this branch by `fx-refactor-types`
+- Run `npm install` to install the project dependencies
+- Run `npm run build`
+- Run `npm run start'
 
 #### Checklist
 
