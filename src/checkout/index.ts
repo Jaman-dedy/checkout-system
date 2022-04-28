@@ -1,4 +1,5 @@
 import { productType, rulesType } from '../types/index';
+import { ITEM_CODE, DISCOUNT } from '../constants/index.js';
 
 const basket: Array<productType> = [];
 let totalPrice;
@@ -24,14 +25,14 @@ export class Checkout {
   }
   applyRules(rules: Array<rulesType>, basket: Array<productType>) {
     totalPrice = basket.reduce((n, { price }) => n + price, 0);
-    const item_code = '002';
+    const item_code = ITEM_CODE;
     const count = this.checkOccurency(basket, item_code);
     for (const rule of rules) {
       if (rule?.limit < totalPrice) {
         totalPrice = totalPrice - (totalPrice * rule?.percent) / 100;
       }
       if (count >= 2) {
-        totalPrice = totalPrice - 3.99;
+        totalPrice = totalPrice - DISCOUNT;
       }
       return totalPrice;
     }
