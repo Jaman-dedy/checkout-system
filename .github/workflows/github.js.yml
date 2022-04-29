@@ -8,9 +8,7 @@ on:
 
 jobs:
   coverage:
-    permissions:
-      checks: write
-      pull-requests: write
+    permissions: write-all
     runs-on: ubuntu-latest
 
     strategy:
