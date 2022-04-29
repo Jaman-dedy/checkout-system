@@ -11,8 +11,18 @@ export default {
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.ts$',
   coverageDirectory: 'coverage',
-  collectCoverageFrom: [
-    'src/**/*.ts',
-    '!src/**/*.d.ts',
-  ],
+  collectCoverageFrom: ['src/**/*.ts', '!src/**/*.d.ts'],
+  transform: {
+    '^.+\\.jsx?$': 'babel-jest',
+    // '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.[tj]s$': 'ts-jest',
+  },
+  transformIgnorePatterns: ['<rootDir>/node_modules/(?!@sindresorhus/fnv1a)'],
+  globals: {
+    'ts-jest': {
+      tsconfig: {
+        allowJs: true,
+      },
+    },
+  },
 };
