@@ -43,7 +43,7 @@ export class Checkout {
   }
   total() {
     this.applyRules(this.rules, basket);
-    return console.log(`totalPrice`, totalPrice.toFixed(2));
+    return console.log(`Price : `, totalPrice.toFixed(2), '€');
   }
   validItem(code: string) {
     return this.products.find((item) => item.code == code);
