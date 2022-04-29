@@ -69,21 +69,27 @@ let products: Array<productType>;
 let rules: Array<rulesType>;
 
 // Now we can add more item to the system
+
 const item_001 = new Item('001', 'Curry sauce', 1.95);
 const item_002 = new Item('002', 'Pizza', 5.99);
 const item_003 = new Item('003', "Men's T-Shirt", 25.0);
 
-//The items are being stored in the products array in order to use them in the system
+// The items are being stored in the products array in order to use them in the system
+
 products = [{ ...item_001 }, { ...item_002 }, { ...item_003 }];
 
-//Let us now add promotional rules and store them into the system
+// Let us now add promotional rules and store them into the system
 
 // For instance : we will apply 10% discount to orders over 30 €
+
 const rule_001 = new PerTotal(DISCOUNT_PERCENT, THRESHOLD);
+
 // Here for instance : we will drop the total prize by 3.99 €, if a customer buys 2 or more item 002
+
 const rule_002 = new PerItem(ITEM_CODE, MIN_ITEM, DISCOUNT);
 
 // Then we store the rules to be added in the system
+
 rules = [{ ...rule_001 }, { ...rule_002 }];
 
 // Now we have the items and the rules added we can then checkout.
@@ -102,6 +108,10 @@ price = co.total();
 price = 31.05€
 
 ```
+
+## Future improvement
+
+- Improve the actual design by adding model for ; Item, Rules, and stores these in the database
 
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.6-blue.svg
 [typescript]: https://www.typescriptlang.org/
