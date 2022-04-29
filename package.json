@@ -14,7 +14,7 @@
     "build:watch": "tsc -w -p tsconfig.json",
     "build:release": "npm run clean && tsc -p tsconfig.release.json",
     "lint": "eslint . --ext .ts",
-    "test": "jest --coverage",
+    "test": "jest --ci --coverage",
     "test:badges": "npm run test && jest-coverage-badges",
     "test:watch": "jest --watch"
   },
