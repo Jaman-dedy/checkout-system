@@ -1,4 +1,5 @@
 export default {
+  coverageReporters: ['json-summary', 'text', 'lcov'],
   testEnvironment: 'node',
   preset: 'ts-jest/presets/default-esm',
   globals: {
